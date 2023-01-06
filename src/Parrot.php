@@ -1,7 +1,7 @@
 <?php
 namespace App;
 
-class Parrot extends Animals
+class Parrot extends Animals implements CanFly
 {
     public function getNoise(): string
     {

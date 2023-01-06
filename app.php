@@ -1,10 +1,8 @@
 <?php
 namespace App;
 require __DIR__ . '/vendor/autoload.php';
-
+// Tableau qui stock les animaux
 $animals= [new ClownFish("Poisson clown"), new Zebra("Zebre")];
-
-$numAnimals = count($animals);
 
 // Fish
 for($i=1; $i<=5; $i++)
@@ -48,4 +46,9 @@ foreach ($animals as $animal)
     echo $animal->getName()." make a noise ". $animal->noise(). "\n";
 }
 
+foreach ($animals as $animal)
+{
+    Zoo::addAnimal($animal);
+}
+echo Zoo::visitTheZoo();
 #var_dump($animals);
